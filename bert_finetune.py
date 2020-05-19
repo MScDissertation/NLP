@@ -42,7 +42,7 @@ with strategy.scope():
       bert_config, num_classes, max_seq_length)
 
   checkpoint = tf.train.Checkpoint(model=encoder)
-  checkpoint.restore(ckpt_path).assert_consumed()
+  #checkpoint.restore(ckpt_path).assert_consumed()
 
   epochs = 3
   train_data_size = input_meta_data['train_data_size']

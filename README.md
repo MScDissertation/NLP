@@ -1,5 +1,6 @@
 Get model 
 
+Get data
 
 prepare fine tune data
 
@@ -18,3 +19,5 @@ python ../data/create_finetuning_data.py \
  --fine_tuning_task_type=classification --max_seq_length=128 \
  --classification_task_name=${TASK_NAME}
 </code>
+
+run bert_finetune
