@@ -5,3 +5,4 @@ fine_data
 save
 .ipynb_checkpoints
 bert-master
+*.zip
