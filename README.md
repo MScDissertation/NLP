@@ -1,8 +1,15 @@
-Get model 
+## BERT Finetuning
 
-Get data
+Requirements:
 
-prepare fine tune data
+1. Python 3.6+
+2. TensorFlow 2.0
+
+Get model - download from https://github.com/google-research/bert
+
+Get data using download_glue_data.py
+
+Prepare fine tune data using
 
 <code>
 export GLUE_DIR=~/data
@@ -20,4 +27,12 @@ python ../data/create_finetuning_data.py \
  --classification_task_name=${TASK_NAME}
 </code>
 
-run bert_finetune
+Run bert_finetune.py
+
+### huggingface transformer example
+
+Python 3.6+
+
+1. TensorFlow 2.0
+2. PyTorch 1.0.0+
+3. pip install transformers
