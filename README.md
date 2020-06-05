@@ -46,3 +46,6 @@ Python 3.6+ TensorFlow 2.0 PyTorch 1.0.0+
    https://github.com/tensorflow/models/tree/master/official/nlp/bert#process-datasets
 
 4. Run bert_finetune.py
+
+
+Got wiki data from https://github.com/pytorch/examples/tree/master/word_language_model/data

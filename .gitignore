@@ -1,5 +1,6 @@
 data
 cased_L-*
+uncased_L-*
 .DS_Store
 fine_data
 save*/
