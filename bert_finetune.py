@@ -32,7 +32,7 @@ train_input_fn = run_classifier.get_dataset_fn(train_data_path, max_seq_length, 
 eval_input_fn = run_classifier.get_dataset_fn(eval_data_path, max_seq_length, eval_batch_size, is_training=False)
 
 strategy = distribution_utils.get_distribution_strategy(
-      distribution_strategy='one_device', num_gpus=1)
+      distribution_strategy='one_device', num_gpus=2)
 
 with strategy.scope():
   training_dataset = train_input_fn()

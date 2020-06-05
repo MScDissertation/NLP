@@ -2,7 +2,8 @@ data
 cased_L-*
 .DS_Store
 fine_data
-save
+save*/
 .ipynb_checkpoints
 bert-master
 *.zip
+config.txt
