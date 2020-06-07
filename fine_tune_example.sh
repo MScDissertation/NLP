@@ -12,4 +12,4 @@ python ./transformers/examples/text-classification/run_glue.py \
   --per_device_train_batch_size 32 \
   --learning_rate 2e-5 \
   --num_train_epochs 3.0 \
-  --output_dir /tmp/mrpc_output/
+  --output_dir /tmp/mrpc_output/ --overwrite_output_dir
