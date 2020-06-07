@@ -20,16 +20,6 @@ Requirements:
 
 4. <code> pip install tf-models-nightly </code>
 
-### huggingface transformer example
-
-For pytorch implementation
-
-Python 3.6+ TensorFlow 2.0 PyTorch 1.0.0+
-
-1. conda install -n venv tensorflow-datasets
-2. conda install -n venv pytorch torchvision -c pytorch
-3. pip install transformers
-
 ### Steps:
 
 1. Get model - download from https://github.com/google-research/bert
@@ -48,4 +38,32 @@ Python 3.6+ TensorFlow 2.0 PyTorch 1.0.0+
 4. Run bert_finetune.py
 
 
-Got wiki data from https://github.com/pytorch/examples/tree/master/word_language_model/data
+### huggingface transformer example
+
+For pytorch implementation
+
+Python 3.6+ TensorFlow 2.0 PyTorch 1.0.0+
+
+1. git clone https://github.com/huggingface/transformers
+
+    cd transformers
+
+    pip install .
+
+2. pip install -r ./examples/requirements.txt
+
+(git pull \
+pip install --upgrade .)
+
+
+3. download data as in tensorflow example. No need to download model separately
+
+4. cd ..
+5. sh fine_tune_example.sh
+
+
+## Pretrain
+
+version issues!
+
+Got wiki data from https://github.com/pytorch/examples/tree/master/word_language_model/data for pretraining example

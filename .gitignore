@@ -5,6 +5,7 @@ uncased_L-*
 fine_data
 save*/
 .ipynb_checkpoints
-bert-master
+bert-master*
 *.zip
 config.txt
+report.txt
