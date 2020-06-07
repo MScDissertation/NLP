@@ -61,7 +61,10 @@ pip install --upgrade .)
 4. cd ..
 5. sh fine_tune_example.sh
 
+6. Record gpu utilization details \
+ sh nvidiasmi.sh
 
+ 
 ## Pretrain
 
 version issues!
