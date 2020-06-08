@@ -65,6 +65,13 @@ pip install --upgrade .)
  sh nvidiasmi.sh
 
  
+### Language modelling
+
+Download wikitext2 from https://blog.einstein.ai/the-wikitext-long-term-dependency-language-modeling-dataset/
+
+sh mlm_fine_tune_bert.sh
+
+
 ## Pretrain
 
 version issues!

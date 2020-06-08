@@ -11,3 +11,4 @@ config.txt
 report.txt
 transformers
 runs
+*.zip
