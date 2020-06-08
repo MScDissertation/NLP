@@ -81,7 +81,7 @@ converted tf1 code to tf2 with tf_upgrade_v2. \
 https://github.com/tensorflow/tensorflow/issues/26854
 
 Steps:
-
+0. Download model <code> sh download_uncased_base.sh </code>
 1. Get wiki data from https://github.com/pytorch/examples/tree/master/word_language_model/data 
 2. Preprocess data <code>sh pretrain_data.sh</code>
 3. Run training <code>sh pre_train.sh </code>
