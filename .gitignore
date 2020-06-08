@@ -12,3 +12,4 @@ report.txt
 transformers
 runs
 *.zip
+__pycache__

@@ -25,7 +25,7 @@ from absl import flags
 from absl import logging
 import tensorflow as tf
 
-from official.nlp.bert import tokenization
+import tokenization
 
 FLAGS = flags.FLAGS
 
