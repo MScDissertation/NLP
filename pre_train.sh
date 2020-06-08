@@ -1,7 +1,7 @@
 #! bin/bash
 export BERT_BASE_DIR=uncased_L-12_H-768_A-12
 
-python bert-master/run_pretraining.py \
+python bert-master_v2/run_pretraining.py \
   --input_file=/tmp/tf_examples.tfrecord \
   --output_dir=/tmp/pretraining_output \
   --do_train=True \
