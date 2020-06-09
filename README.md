@@ -59,7 +59,9 @@ pip install --upgrade .)
 3. download data as in tensorflow example. No need to download model separately
 
 4. cd ..
-5. sh fine_tune_example.sh
+5. sh fine_tune_example.sh MRPC
+
+Task argument can be CoLA, SST-2, MRPC, STS-B, QQP, MNLI, QNLI, RTE, WNLI
 
 6. Record gpu utilization details \
  sh nvidiasmi.sh
@@ -82,6 +84,6 @@ https://github.com/tensorflow/tensorflow/issues/26854
 
 Steps:
 0. Download model <code> sh download_uncased_base.sh </code>
-1. Get wiki data from https://github.com/pytorch/examples/tree/master/word_language_model/data 
+1. Got wiki data from https://github.com/pytorch/examples/tree/master/word_language_model/data 
 2. Preprocess data <code>sh pretrain_data.sh</code>
 3. Run training <code>sh pre_train.sh </code>
