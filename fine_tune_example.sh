@@ -1,7 +1,12 @@
 #! bin/bash
 
 export GLUE_DIR=data
-export TASK=$1
+if [ "$#" -eq  "0" ]
+then
+  export TASK=MRPC
+else
+  export TASK=$1
+fi
 
 python ./transformers/examples/text-classification/run_glue.py \
   --model_name_or_path bert-base-cased \
