@@ -67,6 +67,13 @@ Second argument, batch size can 16, 32, 64, etc
 6. Record gpu utilization details \
  sh nvidiasmi.sh
 
+## Data collection
+Runs fine-tune training and records nvidia-smi output \
+Using pytorch 
+
+sh train_and_record_power.sh task batchsize maxSeqLength model(cased/uncased)
+
+<code>sh train_and_record_power.sh CoLA 32 128 bert-base-cased</code>
  
 ### Language modelling
 
