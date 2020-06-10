@@ -13,12 +13,12 @@ Requirements:
 
    conda create -n venv python=3.7
 
-   conda install -n venv jupyter scipy numpy matplotlib tensorflow-gpu tensorflow-hub
+   conda install -n venv jupyter scipy numpy matplotlib tensorflow-gpu tensorflow-hub seaborn
    </code>
 
 3. <code> conda activate myenv</code>
-
-4. <code> pip install tf-models-nightly </code>
+<!-- 
+4. <code> pip install tf-models-nightly </code>  -->
 
 ### Steps:
 
