@@ -21,6 +21,8 @@ if [ "$4" ]
 then
   export MODEL=$4
 fi
-sh nvidiasmi.sh ${TASK}_${BATCH_SIZE}_${MAX_SEQ_LEN}
+sh nvidiasmi.sh ${TASK}_${BATCH_SIZE}_${MAX_SEQ_LEN} &
 sh fine_tune_example.sh $TASK $BATCH_SIZE $MAX_SEQ_LEN $MODEL
+echo "Exiting"
 pkill nvidia-smi
+echo "New power consumption recorded"
