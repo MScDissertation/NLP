@@ -59,9 +59,10 @@ pip install --upgrade .)
 3. download data as in tensorflow example. No need to download model separately
 
 4. cd ..
-5. sh fine_tune_example.sh MRPC
+5. sh fine_tune_example.sh MRPC 32
 
-Task argument can be CoLA, SST-2, MRPC, STS-B, QQP, MNLI, QNLI, RTE, WNLI
+Task argument can be CoLA, SST-2, MRPC, STS-B, QQP, MNLI, QNLI, RTE, WNLI \
+Second argument, batch size can 16, 32, 64, etc
 
 6. Record gpu utilization details \
  sh nvidiasmi.sh
