@@ -68,7 +68,7 @@ Second argument, batch size can 16, 32, 64, etc
  sh nvidiasmi.sh
 
 ## Data collection
-Runs fine-tune training and records nvidia-smi output \
+Runs fine-tune training and record nvidia-smi output \
 Using pytorch 
 
 sh train_and_record_power.sh task batchsize maxSeqLength model(cased/uncased)
