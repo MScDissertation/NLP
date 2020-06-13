@@ -15,3 +15,4 @@ runs
 __pycache__
 power_gadget/
 cpu-energy-meter-1.2/
+results/
