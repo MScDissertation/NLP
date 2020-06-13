@@ -13,7 +13,7 @@ Requirements:
 
    conda create -n venv python=3.7
 
-   conda install -n venv jupyter scipy numpy matplotlib tensorflow-gpu tensorflow-hub seaborn
+   conda install -n venv jupyter scipy numpy matplotlib tensorflow-gpu tensorflow-hub seaborn 
    </code>
 
 3. <code> conda activate myenv</code>
@@ -43,6 +43,8 @@ Requirements:
 For pytorch implementation
 
 Python 3.6+ TensorFlow 2.0 PyTorch 1.0.0+
+
+pip install statsmodels
 
 1. git clone https://github.com/huggingface/transformers
 
