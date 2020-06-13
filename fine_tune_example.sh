@@ -32,4 +32,4 @@ python ./transformers/examples/text-classification/run_glue.py \
   --per_device_train_batch_size $BATCH_SIZE \
   --learning_rate $LEARNING_RATE \
   --num_train_epochs 3.0 \
-  --output_dir /tmp/${TASK}_output/ --overwrite_output_dir
+  --output_dir /tmp/${TASK}_${BATCH_SIZE}_${MAX_SEQ_LEN}_output/ --overwrite_output_dir
