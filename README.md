@@ -96,4 +96,6 @@ Steps:
 0. Download model <code> sh download_uncased_base.sh </code>
 1. Got wiki data from https://github.com/pytorch/examples/tree/master/word_language_model/data 
 2. Preprocess data <code>sh pretrain_data.sh</code>
-3. Run training <code>sh pre_train.sh </code>
+3. Run training <code>sh pre_train.sh </code> 
+OR
+<code> sh pretrain_and_record_power.sh </code>
