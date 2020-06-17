@@ -99,3 +99,19 @@ Steps:
 3. Run training <code>sh pre_train.sh </code> 
 OR
 <code> sh pretrain_and_record_power.sh </code>
+
+## Pretrain with more data
+
+https://github.com/google-research/bert/issues/341
+https://github.com/dsindex/bert
+
+1. Download wiki dump
+2. Extract using https://github.com/attardi/wikiextractor 
+<code>python wikiextractor-master/WikiExtractor.py enwiki-latest-pages-articles.xml.bz2 --output wikidump</code>
+
+3. Clean using <code>sh create_pretraining_data.sh</code> \
+May need to install and import nltk \
+pip install nltk \
+import nltk \
+nltk.download('punkt')
+4. Run pretraining <code>sh pretrain_large.sh</code>
