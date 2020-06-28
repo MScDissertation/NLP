@@ -2,7 +2,7 @@
 
 # for base, uncased
 export train_batch_size=32
-export directory=../wikidump
+export directory=/media/data/wikidump
 in_file=${directory}/*/*.tfrecord
 out_dir=${directory}/pretraining_output
 rm -rf ${out_dir}
