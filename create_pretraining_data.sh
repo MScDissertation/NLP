@@ -4,7 +4,7 @@
 do_lower_case='True'
 
 export vocab=uncased_L-12_H-768_A-12/vocab.txt
-export datadir=../wikidump
+export datadir=/media/data/wikidump
 export dirlist=`ls ${datadir}`
 
 function fclear() {
