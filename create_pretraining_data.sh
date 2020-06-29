@@ -7,7 +7,7 @@ export vocab=uncased_L-12_H-768_A-12/vocab.txt
 export datadir=/media/data/wikidump
 export dirlist=`ls ${datadir}`
 
-function fclear() {
+function fclear {
     for dir in ${dirlist}; do
         files=`ls ${datadir}/${dir} | grep -v '.pre'`
         for file in ${files}; do
@@ -24,7 +24,7 @@ function fclear() {
 
 #fclear
 
-function create_data() {
+function create_data {
     for dir in ${dirlist}; do
         echo ${datadir}/${dir}
         files=`ls ${datadir}/${dir} | grep -v '.pre'`
