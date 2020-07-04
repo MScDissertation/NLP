@@ -13,12 +13,12 @@ Requirements:
 
    conda create -n venv python=3.7
 
-   conda install -n venv jupyter scipy numpy matplotlib tensorflow-gpu tensorflow-hub seaborn 
+   conda install -n venv jupyter scipy numpy matplotlib tensorflow-gpu tensorflow-hub seaborn
    </code>
 
 3. <code> conda activate myenv</code>
-<!-- 
-4. <code> pip install tf-models-nightly </code>  -->
+   <!--
+4. <code> pip install tf-models-nightly </code> -->
 
 ### Steps:
 
@@ -37,7 +37,6 @@ Requirements:
 
 4. Run bert_finetune.py
 
-
 ### huggingface transformer example
 
 For pytorch implementation
@@ -48,15 +47,14 @@ pip install statsmodels
 
 1. git clone https://github.com/huggingface/transformers
 
-    cd transformers
+   cd transformers
 
-    pip install .
+   pip install .
 
 2. pip install -r ./examples/requirements.txt
 
 (git pull \
 pip install --upgrade .)
-
 
 3. download data as in tensorflow example. No need to download model separately
 
@@ -67,24 +65,25 @@ Task argument can be CoLA, SST-2, MRPC, STS-B, QQP, MNLI, QNLI, RTE, WNLI \
 Second argument, batch size can 16, 32, 64, etc
 
 6. Record gpu utilization details \
- sh nvidiasmi.sh
+   sh nvidiasmi.sh
 
 ## Data collection
+
 Runs fine-tune training and record nvidia-smi output \
-Using pytorch 
+Using pytorch
 
 sh train_and_record_power.sh task batchsize maxSeqLength model(cased/uncased)
 
 <code>sh train_and_record_power.sh CoLA 32 128 bert-base-cased</code>
- 
+
 ### Language modelling
 
 Download wikitext2 from https://blog.einstein.ai/the-wikitext-long-term-dependency-language-modeling-dataset/
 
 sh mlm_fine_tune_bert.sh
 
-
 ## Pretrain
+
 tensorflow 2.x
 
 Version issues :(
@@ -93,12 +92,13 @@ converted tf1 code to tf2 with tf_upgrade_v2. \
 https://github.com/tensorflow/tensorflow/issues/26854
 
 Steps:
+
 0. Download model <code> sh download_uncased_base.sh </code>
-1. Got wiki data from https://github.com/pytorch/examples/tree/master/word_language_model/data 
-2. Preprocess data <code>sh pretrain_data.sh</code>
-3. Run training <code>sh pre_train.sh </code> 
-OR
-<code> sh pretrain_and_record_power.sh </code>
+1. Got wiki data from https://github.com/pytorch/examples/tree/master/word_language_model/data
+1. Preprocess data <code>sh pretrain_data.sh</code>
+1. Run training <code>sh pre_train.sh </code>
+   OR
+   <code> sh pretrain_and_record_power.sh </code>
 
 ## Pretrain with more data
 
@@ -106,12 +106,12 @@ https://github.com/google-research/bert/issues/341
 https://github.com/dsindex/bert
 
 1. Download wiki dump
-2. Extract using https://github.com/attardi/wikiextractor 
-<code>python wikiextractor-master/WikiExtractor.py enwiki-latest-pages-articles.xml.bz2 --output wikidump</code>
+2. Extract using https://github.com/attardi/wikiextractor
+   <code>setsid python ../wikiextractor-master/WikiExtractor.py /media/data/wikidownload.xml.bz2 --output /media/data/wikidump --processes 1 -q</code>
 
 3. Clean using <code>sh create_pretraining_data.sh</code> \
-May need to install and import nltk \
-pip install nltk \
-import nltk \
-nltk.download('punkt')
+   May need to install and import nltk \
+   pip install nltk \
+   import nltk \
+   nltk.download('punkt')
 4. Run pretraining <code>sh pretrain_large.sh</code>
