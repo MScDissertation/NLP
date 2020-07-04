@@ -19,3 +19,4 @@ cpu-energy-meter-1.2/
 results/
 wikidownload.xml.bz2
 */*.env
+/logs/fit
