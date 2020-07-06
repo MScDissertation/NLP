@@ -20,3 +20,4 @@ results/
 wikidownload.xml.bz2
 */*.env
 /logs/fit
+nohup.out
