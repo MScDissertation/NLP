@@ -119,10 +119,8 @@ https://github.com/dsindex/bert
 ### Test GPU
 
 <code>
-device = "cpu" 
 
-if torch.cuda.is_available(): 
-    device = "cuda" 
+import tensorflow as tf
 
-print(device) 
+print(tf.config.list_physical_devices('GPU'))
 </code>
