@@ -17,8 +17,8 @@ Requirements:
    </code>
 
 3. <code> conda activate myenv</code>
-   <!--
-4. <code> pip install tf-models-nightly </code> -->
+
+4. <code> pip install tf-models-nightly </code>
 
 ### Steps:
 
@@ -115,3 +115,14 @@ https://github.com/dsindex/bert
    import nltk \
    nltk.download('punkt')
 4. Run pretraining <code>sh pretrain_large.sh</code>
+
+### Test GPU
+
+<code>
+device = "cpu" 
+
+if torch.cuda.is_available(): 
+    device = "cuda" 
+
+print(device) 
+</code>
