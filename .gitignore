@@ -21,3 +21,4 @@ wikidownload.xml.bz2
 */*.env
 /logs/fit
 nohup.out
+wikitext-2-raw/
