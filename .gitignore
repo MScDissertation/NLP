@@ -22,3 +22,5 @@ wikidownload.xml.bz2
 /logs/fit
 nohup.out
 wikitext-2-raw/
+output/
+TrainFromScratch/*/
