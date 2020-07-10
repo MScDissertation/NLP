@@ -9,4 +9,5 @@ python ./transformers/examples/language-modeling/run_language_modeling.py \
     --train_data_file=$TRAIN_FILE \
     --do_eval \
     --eval_data_file=$TEST_FILE \
+    --per_device_train_batch_size=1 \
     --mlm
