@@ -12,3 +12,7 @@ sh fine_tune.sh model_name batch_size layers
 <code>
 sh fine_tune.sh gpt2 16 12
 </code>
+
+Run all with different batch size
+
+<code>sh run_all.sh 2</code>
