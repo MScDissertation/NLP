@@ -1,6 +1,6 @@
 export TRAIN_FILE=../wikitext-2-raw/wiki.train.raw
 export TEST_FILE=../wikitext-2-raw/wiki.test.raw
-export OUTPUT_DIR=/media/data/gpt2
+export OUTPUT_DIR=/media/data/openai-gpt
 export BATCH_SIZE=1
 if [ "$1" ]
 then 
@@ -8,8 +8,8 @@ then
 fi
 python ../transformers/examples/language-modeling/run_language_modeling.py \
     --output_dir=$OUTPUT_DIR \
-    --model_type=gpt2 \
-    --model_name_or_path=gpt2 \
+    --model_type=gpt \
+    --model_name_or_path=openai-gpt \
     --do_train \
     --train_data_file=$TRAIN_FILE \
     --do_eval \
