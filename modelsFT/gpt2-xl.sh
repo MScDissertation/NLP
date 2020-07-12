@@ -1,6 +1,7 @@
 export TRAIN_FILE=../wikitext-2-raw/wiki.train.raw
 export TEST_FILE=../wikitext-2-raw/wiki.test.raw
 export OUTPUT_DIR=/media/data/gpt2-xl
+mkdir $OUTPUT_DIR
 export BATCH_SIZE=1
 if [ "$1" ]
 then 
