@@ -1,7 +1,7 @@
-export TRAIN_FILE=wikitext-2-raw/wiki.train.raw
-export TEST_FILE=wikitext-2-raw/wiki.test.raw
+export TRAIN_FILE=../wikitext-2-raw/wiki.train.raw
+export TEST_FILE=../wikitext-2-raw/wiki.test.raw
 
-python ./transformers/examples/language-modeling/run_language_modeling.py \
+python ../transformers/examples/language-modeling/run_language_modeling.py \
     --output_dir=GPT/weights \
     --model_type=gpt2 \
     --model_name_or_path=gpt2 \
