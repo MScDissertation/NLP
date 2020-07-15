@@ -16,7 +16,11 @@ sh fine_tune.sh gpt2 16 12
 
 Run all with different batch size
 
-<code>sh run_all.sh 2</code>
+<code>sh run_all.sh /media/data 2</code>
+
+arguments are output dir, batchsize and files to run
+
+<code>sh run_all.sh /media/data 2 [bert-tiny]</code>
 
 Run question answering
 
