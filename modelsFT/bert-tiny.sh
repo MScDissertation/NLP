@@ -1,15 +1,28 @@
-export OUTPUT_DIR=/media/data/bert-tiny
-mkdir $OUTPUT_DIR
+#! bin/bash
+
+export MODEL=bert
+export MODEL_CONFIG=mrm8488/bert-tiny-finetuned-squadv2
 export BATCH_SIZE=1
-if [ "$1" ]
-then 
-    export BATCH_SIZE=$1
-fi
+
+export OUTPUT_DIR=/media/data/bert-tiny
+
 export SQUAD_DIR=../SQUAD
 
+if [ "$1" ]
+then 
+    export OUTPUT_DIR=$1
+fi
+mkdir $OUTPUT_DIR
+
+if [ "$2" ]
+then 
+    export BATCH_SIZE=$2
+fi
+
+
 python ../transformers/examples/question-answering/run_squad.py \
-    --model_type bert \
-    --model_name_or_path mrm8488/bert-tiny-5-finetuned-squadv2 \
+    --model_type $MODEL \
+    --model_name_or_path $MODEL_CONFIG \
     --do_train \
     --do_eval \
     --train_file $SQUAD_DIR/train-v2.0.json \

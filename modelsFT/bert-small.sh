@@ -1,5 +1,12 @@
-export OUTPUT_DIR=/media/data/xlnet-base-cased
+#! bin/bash
+
+export MODEL=bert
+export MODEL_CONFIG=mrm8488/bert-small-finetuned-squadv2
 export BATCH_SIZE=1
+
+export OUTPUT_DIR=/media/data/bert-small
+
+export SQUAD_DIR=../SQUAD
 
 if [ "$1" ]
 then 
@@ -11,11 +18,11 @@ if [ "$2" ]
 then 
     export BATCH_SIZE=$2
 fi
-export SQUAD_DIR=../SQUAD
+
 
 python ../transformers/examples/question-answering/run_squad.py \
-    --model_type xlnet \
-    --model_name_or_path xlnet-base-cased \
+    --model_type $MODEL \
+    --model_name_or_path $MODEL_CONFIG \
     --do_train \
     --do_eval \
     --train_file $SQUAD_DIR/train-v2.0.json \

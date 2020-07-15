@@ -1,11 +1,17 @@
 export TRAIN_FILE=../wikitext-2-raw/wiki.train.raw
 export TEST_FILE=../wikitext-2-raw/wiki.test.raw
 export OUTPUT_DIR=/media/data/gpt2
-mkdir $OUTPUT_DIR
 export BATCH_SIZE=1
+
 if [ "$1" ]
 then 
-    export BATCH_SIZE=$1
+    export OUTPUT_DIR=$1
+fi
+mkdir $OUTPUT_DIR
+
+if [ "$2" ]
+then 
+    export BATCH_SIZE=$2
 fi
 python ../transformers/examples/language-modeling/run_language_modeling.py \
     --output_dir=$OUTPUT_DIR \

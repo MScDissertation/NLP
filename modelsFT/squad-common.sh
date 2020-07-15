@@ -1,21 +1,30 @@
-export OUTPUT_DIR=/media/data/xlnet-base-cased
+#! bin/bash
+
+export MODEL=bert
+export MODEL_CONFIG=bert-base-uncased
 export BATCH_SIZE=1
 
-if [ "$1" ]
-then 
-    export OUTPUT_DIR=$1
+export SQUAD_DIR=../SQUAD
+if ["$1"]
+then
+    export MODEL=$1
 fi
+if ["$2"]
+then
+    export MODEL_CONFIG=$2
+fi
+if [ "$3" ]
+then 
+    export BATCH_SIZE=$3
+fi
+
+export OUTPUT_DIR=/media/data/$MODEL_CONFIG
 mkdir $OUTPUT_DIR
 
-if [ "$2" ]
-then 
-    export BATCH_SIZE=$2
-fi
-export SQUAD_DIR=../SQUAD
 
 python ../transformers/examples/question-answering/run_squad.py \
-    --model_type xlnet \
-    --model_name_or_path xlnet-base-cased \
+    --model_type $MODEL \
+    --model_name_or_path $MODEL_CONFIG \
     --do_train \
     --do_eval \
     --train_file $SQUAD_DIR/train-v2.0.json \
@@ -24,5 +33,4 @@ python ../transformers/examples/question-answering/run_squad.py \
     --num_train_epochs 1 \
     --output_dir $OUTPUT_DIR \
     --per_gpu_eval_batch_size=$BATCH_SIZE \
-    --per_gpu_train_batch_size=$BATCH_SIZE  \
-    --save_steps 10000
+    --per_gpu_train_batch_size=$BATCH_SIZE
