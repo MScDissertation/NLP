@@ -18,9 +18,9 @@ Run all with different batch size
 
 <code>sh run_all.sh /media/data 2</code>
 
-arguments are output dir, batchsize and files to run
+arguments are output dir, batchsize and file to run if you want to run 1
 
-<code>sh run_all.sh /media/data 2 [bert-tiny bert-medium]</code>
+<code>sh run_all.sh /media/data 2 "bert-tiny"</code>
 
 Run question answering
 
