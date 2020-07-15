@@ -20,7 +20,7 @@ Run all with different batch size
 
 arguments are output dir, batchsize and files to run
 
-<code>sh run_all.sh /media/data 2 [bert-tiny]</code>
+<code>sh run_all.sh /media/data 2 [bert-tiny bert-medium]</code>
 
 Run question answering
 
