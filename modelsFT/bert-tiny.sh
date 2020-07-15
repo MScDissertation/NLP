@@ -1,4 +1,4 @@
-export OUTPUT_DIR=/media/data/xlnet-base-cased
+export OUTPUT_DIR=/media/data/bert-tiny
 mkdir $OUTPUT_DIR
 export BATCH_SIZE=1
 if [ "$1" ]
@@ -8,8 +8,8 @@ fi
 export SQUAD_DIR=../SQUAD
 
 python ../transformers/examples/question-answering/run_squad.py \
-    --model_type xlnet \
-    --model_name_or_path xlnet-base-cased \
+    --model_type bert \
+    --model_name_or_path mrm8488/bert-tiny-5-finetuned-squadv2 \
     --do_train \
     --do_eval \
     --train_file $SQUAD_DIR/train-v1.1.json \
