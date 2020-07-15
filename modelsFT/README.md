@@ -1,4 +1,5 @@
 # fine tune training of models like roberta, gpt2, bert
+
 Run individual model
 
 <code>
@@ -16,3 +17,10 @@ sh fine_tune.sh gpt2 16 12
 Run all with different batch size
 
 <code>sh run_all.sh 2</code>
+
+Run question answering
+
+cd ..
+sh download_squad.sh
+cd ModelsFT
+sh xlnet-base-cased.sh
