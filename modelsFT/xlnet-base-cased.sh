@@ -25,4 +25,5 @@ python ../transformers/examples/question-answering/run_squad.py \
     --output_dir $OUTPUT_DIR \
     --per_gpu_eval_batch_size=$BATCH_SIZE \
     --per_gpu_train_batch_size=$BATCH_SIZE  \
-    --save_steps 10000
+    --save_steps 10000 \
+    --overwrite_output_dir
