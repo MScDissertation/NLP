@@ -1,4 +1,6 @@
-# BERT Finetuning
+# BERT for experiments with energy consumption
+
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
 
 Requirements:
 
