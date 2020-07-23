@@ -1,4 +1,6 @@
-# BERT Finetuning
+# BERT for experiments with energy consumption
+
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
 
 Requirements:
 
@@ -107,9 +109,9 @@ https://github.com/dsindex/bert
 
 1. Download wiki dump
 2. Extract using https://github.com/attardi/wikiextractor
-   <code>setsid python ../wikiextractor-master/WikiExtractor.py /media/data/wikidownload.xml.bz2 --output /media/data/wikidump --processes 1 -q</code>
+   <code>python ../wikiextractor/WikiExtractor.py /media/data/wikidownload.xml.bz2 --output /media/data/wikidump --processes 1 -q</code>
 
-3. Clean using <code>sh create_pretraining_data.sh</code> \
+3. Clean using <code>bash create_pretraining_data.sh</code> \
    May need to install and import nltk \
    pip install nltk \
    import nltk \

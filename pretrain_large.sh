@@ -9,7 +9,7 @@ rm -rf ${out_dir}
 cfg_file=uncased_L-12_H-768_A-12/bert_config.json
 num_train_steps=100000
 
-sh nvidiasmi.sh pretrain &
+sh nvidiasmi.sh pretrain_large &
 python bert-master_v2/run_pretraining.py \
     --input_file=${in_file} \
     --output_dir=${out_dir} \
