@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 # for uncased
 do_lower_case='True'

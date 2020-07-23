@@ -1,0 +1,5 @@
+timestamp, utilization.gpu [%], utilization.memory [%], memory.total [MiB], memory.used [MiB], memory.free [MiB], temperature.gpu, power.draw [W], pstate
+2020/07/22 19:42:33.354, 0, 0, 11178, 2, 11176, 37, 10.19, P8
+2020/07/22 19:42:33.358, 0, 0, 11176, 18, 11158, 36, 11.27, P8
+2020/07/22 19:42:34.362, 0, 0, 11178, 2, 11176, 37, 9.61, P8
+2020/07/22 19:42:34.365, 0, 0, 11176, 18, 11158, 36, 10.39, P8
