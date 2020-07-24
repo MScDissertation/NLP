@@ -1,6 +1,6 @@
 #! bin/bash
 
-export folder_name=/home/shivangi/BERT/nvidia_july
+export folder_name=/home/shivangi/BERT/nvidia_pretrain
 export file_name=nvidia_power
 export new_fileName=${file_name}_${current_time}.csv
 export current_time=`date +%s`

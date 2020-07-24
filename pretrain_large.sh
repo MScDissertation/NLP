@@ -3,13 +3,17 @@
 # for base, uncased
 export train_batch_size=32
 export directory=/media/data/wikidump
+export time=1h
+if [ "$1" ]
+then
+  export time=$1
+fi
 in_file=${directory}/*/*.tfrecord
 out_dir=${directory}/pretraining_output
 rm -rf ${out_dir}
 cfg_file=uncased_L-12_H-768_A-12/bert_config.json
 num_train_steps=100000
 
-sh nvidiasmi.sh pretrain_large &
 python bert-master_v2/run_pretraining.py \
     --input_file=${in_file} \
     --output_dir=${out_dir} \
@@ -22,7 +26,3 @@ python bert-master_v2/run_pretraining.py \
     --num_train_steps=${num_train_steps} \
     --num_warmup_steps=10000 \
     --learning_rate=2e-5
-
-echo "Exiting"
-pkill nvidia-smi
-echo "New power consumption recorded"
