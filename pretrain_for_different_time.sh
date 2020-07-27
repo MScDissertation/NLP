@@ -1,6 +1,6 @@
 #! bin/bash
 # 4 hours
-export TASK=QQP
+
 export time_duration="4h"
 for time in ${time_duration}; do
     sh nvidiasmi.sh pretrain_large_${time_duration} &
