@@ -5,7 +5,7 @@
 Requirements:
 
 1. Python 3.6+
-2. TensorFlow 2.0
+2. TensorFlow 2.2.0
 
 ### Virtual environment
 
