@@ -1,6 +1,27 @@
-# BERT for experiments with energy consumption
+# Environmental impact of running BERT
 
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
+
+# Analysis of data
+
+## Notebooks
+
+1. power_monitor_analysis/ExtractReading - get reading from power monitor for a time interval. The power monitor writes data in a database every 3 seconds.
+
+1. Fine-tuningAnalysis - extracts data from nvidia-smi, power monitor and combine for analysis. Time-based models are compared to empirical values from power monitor. Carbon footprint is calculated. Also plotted the dataset size relationship with energy and time
+
+1. RunInference - run inference on MRPC, CoLA and STS-B models fine-tuned earlier.
+
+1. InferenceAnalysis - extracts data from nvidia-smi and power monitor for inference and combine for analysis. Time-based models are compared to empirical values from power monitor. Overall carbon footprint is calculated and combined with pre-training and fine-tuning.
+
+1. CompareTimeModels - compare the time-based models.  
+   Merges all data from pre-training, fine-tuning and inference to test scaling with time for models compared to analytical models
+
+1. nvidia-smi data exploration - extract data from nvidia-smi for fine-tuning tasks and initial exploration.
+
+1. Time series data stationary test - data exploration and test with ADF
+
+# Data collection by training and inference
 
 Requirements:
 
@@ -20,16 +41,7 @@ Requirements:
 
 <!-- 4. <code> pip install tf-models-nightly </code> -->
 
-## Data collection for fine-tune training
-
-Runs fine-tune training and record nvidia-smi output \
-Using pytorch
-
-sh train_and_record_power.sh task batchsize maxSeqLength model(cased/uncased)
-
-`sh train_and_record_power.sh CoLA 32 128 bert-base-cased`
-
-## Pretrain
+## Pre-train
 
 Version issues :(
 
@@ -46,7 +58,7 @@ Steps:
    train and record power data  
    <code> sh pretrain_and_record_power.sh </code>
 
-## Pretrain with more data
+## Pre-train with more data
 
 https://github.com/google-research/bert/issues/341  
 https://github.com/dsindex/bert
@@ -65,18 +77,26 @@ https://github.com/dsindex/bert
 
 4. Run pretraining <code>sh pretrain_large.sh</code>
 
-## Example to fine-tune on MRPC:
+## Data collection for fine-tune training
+
+Runs fine-tune training and record power draw and utilisation with nvidia-smi
+
+sh train_and_record_power.sh task batchsize maxSeqLength model(cased/uncased)
+
+`sh train_and_record_power.sh CoLA 32 128 bert-base-cased`
+
+### Example to fine-tune on MRPC:
 
 1. Get model - download from https://github.com/google-research/bert
 
 2. Get data using `download_glue_data.py`
 
-   <code>python download_glue_data.py --data_dir data --tasks MRPC</code>
+   `python download_glue_data.py --data_dir data --tasks MRPC`
 
-3. Prepare fine tune data using <code>sudo sh fine_tune.sh</code>
+3. Prepare fine tune data using `sudo sh fine_tune.sh`  
    (edit fields)
 
-4. Run bert_finetune.py
+4. Run `python bert_finetune.py`
 
 <https://github.com/tensorflow/models/tree/master/official/nlp/bert>  
 <https://github.com/tensorflow/models/tree/master/official/nlp/bert#process-datasets>
@@ -122,22 +142,3 @@ More in /modelsFT
 
 `import tensorflow as tf`
 `print(tf.config.list_physical_devices('GPU'))` -->
-
-# Analysis of data
-
-### Notebooks
-
-1. power_monitor_analysis/ExtractReading - get reading from power monitor for a time interval. The power monitor writes data in a database every 3 seconds.
-
-1. Fine-tuningAnalysis - extracts data from nvidia-smi, power monitor and combine for analysis. Time-based models are compared to empirical values from power monitor. Carbon footprint is calculated. Also plotted the dataset size relationship with energy and time
-
-1. RunInference - run inference on MRPC, CoLA and STS-B models fine-tuned earlier.
-
-1. InferenceAnalysis - extracts data from nvidia-smi and power monitor for inference and combine for analysis. Time-based models are compared to empirical values from power monitor. Overall carbon footprint is calculated and combined with pre-training and fine-tuning.
-
-1. CompareTimeModels - compare the time-based models.  
-   Merges all data from pre-training, fine-tuning and inference to test scaling with time for models compared to analytical models
-
-1. nvidia-smi data exploration - extract data from nvidia-smi for fine-tuning tasks and initial exploration.
-
-1. Time series data stationary test - data exploration and test with ADF
