@@ -6,20 +6,17 @@ Requirements:
 
 1. Python 3.6+
 2. TensorFlow 2.2.0
-3. 1.5.0
+3. Pytorch 1.5.0
+4. Cuda 10.2
 
 ### Virtual environment
 
 1. download miniconda and set the paths
-2. <code>
-   conda update conda
+2. `conda update conda`  
+   `conda create -n venv python=3.7`  
+   `conda install -n venv jupyter scipy numpy matplotlib tensorflow-gpu tensorflow-hub seaborn`
 
-   conda create -n venv python=3.7
-
-   conda install -n venv jupyter scipy numpy matplotlib tensorflow-gpu tensorflow-hub seaborn
-   </code>
-
-3. <code> conda activate venv</code>
+3. `conda activate venv`
 
 <!-- 4. <code> pip install tf-models-nightly </code> -->
 
@@ -30,13 +27,13 @@ Using pytorch
 
 sh train_and_record_power.sh task batchsize maxSeqLength model(cased/uncased)
 
-<code>sh train_and_record_power.sh CoLA 32 128 bert-base-cased</code>
+`sh train_and_record_power.sh CoLA 32 128 bert-base-cased`
 
 ## Pretrain
 
 Version issues :(
 
-converted tf1 code to tf2 with tf_upgrade_v2. \
+converted tf1 code to tf2 with tf_upgrade_v2.  
 https://github.com/tensorflow/tensorflow/issues/26854
 
 Steps:
